@@ -31,7 +31,7 @@ $satuan_obat_4 = $_POST["satuan_obat_4"];
 $tanggal_ambil_obat = $_POST["tanggal_ambil_obat"];
 $waktu_ambil_obat = $_POST["waktu_ambil_obat"];
 
-$sql = mysqli_query($koneksiDB, "INSERT INTO daftarulang (rekam_medis, nama_lengkap, nik, tanggal_lahir, bpjs, poli_dituju, dokter_dituju, tanggal_pemeriksaan, obat_1, jumlah_obat_1, satuan_obat_1, obat_2, jumlah_obat_2, satuan_obat_2,
+$sql = mysqli_query($koneksiDB, "INSERT INTO pemberianobat (rekam_medis, nama_lengkap, nik, tanggal_lahir, bpjs, poli_dituju, dokter_dituju, tanggal_pemeriksaan, obat_1, jumlah_obat_1, satuan_obat_1, obat_2, jumlah_obat_2, satuan_obat_2,
 obat_3, jumlah_obat_3, satuan_obat_3, obat_4, jumlah_obat_4, satuan_obat_4, tanggal_ambil_obat, waktu_ambil_obat) 
 VALUES ('".$rekam_medis."', '".$nama_lengkap."', '".$nik."', '".$tanggal_lahir."', '".$bpjs."', '".$poli_dituju."', '".$dokter_dituju."', '".$tanggal_pemeriksaan."', '".$obat_1."', '".$jumlah_obat_1."', '".$satuan_obat_1."', '".$obat_2."', '".$jumlah_obat_2."', '".$satuan_obat_2."',  
 '".$obat_3."', '".$jumlah_obat_3."', '".$satuan_obat_3."', '".$obat_4."', '".$jumlah_obat_4."', '".$satuan_obat_4."', '".$tanggal_ambil_obat."', '".$waktu_ambil_obat."')");

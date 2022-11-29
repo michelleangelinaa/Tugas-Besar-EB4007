@@ -2,7 +2,7 @@
 <head>
 </head>
 <body>
-  <form action="inputdaftar.php" method="post" enctype="multipart/form-data">
+  <form action="inputambilobat.php" method="post" enctype="multipart/form-data">
     <table>
     <tr><td>Nomor Rekam Medis</td><td>:</td><td><input type="number" name="rekam_medis" /></td></tr>
     <tr><td>Nama Lengkap</td><td>:</td><td><input type="text" name="nama_lengkap" /></td></tr>
