@@ -37,7 +37,7 @@
     <tr><td>Nomor Telepon (+62)</td><td>:</td><td><input type="number" name="nomor_telepon" /></td></tr>
     <tr><td>Email</td><td>:</td><td><input type="text" name="email" /></td></tr>
     <tr><td>Username</td><td>:</td><td><input type="text" name="username" /></td></tr>
-    <tr><td>Password</td><td>:</td><td><input type="password" name="password"></td><td></tr>
+    <tr><td>Password</td><td>:</td><td><input type="password" name="password"></td></tr>
   </table>
     <input type="Submit" name="aksi" value="Simpan"/> | <input type="reset" value="Hapus"/>
 </body>
