@@ -1,5 +1,6 @@
 <html>
 <head>
+  
 </head>
 <body>
   <form action="inputakunpasien.php" method="post" enctype="multipart/form-data">
