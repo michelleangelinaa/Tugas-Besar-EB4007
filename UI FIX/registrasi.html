@@ -21,8 +21,9 @@
               <a href="registrasi.html" class="btn">Register</a>
             </div>
           </nav>
-
+        <br>
         <header>Registration</header>
+        </br>
         <form method="post" action="inputakunpasien.php">
             <div class="form first">
                 <div class="details personal">
@@ -54,32 +55,18 @@
                         </div>
 
                         <div class="input-field">
-                            <label for="bpjs">Pemilik BPJS</label>
-                            <select required>
-                                <option disabled selected></option>
-                                <option name="bpjs" id="bpjs" value="Ya">Ya</option>
-                                <option name="bpjs" id="bpjs" value="Tidak">Tidak</option>                             
-                            </select>
+                            <label for="bpjs">BPJS (Isi dengan Ya/Tidak)</label>
+                            <input type="text" name="bpjs" id="bpjs" placeholder="Kepemilikan BPJS" required>
                         </div>
 
                         <div class="input-field">
-                            <label for="jenis_kelamin">Jenis Kelamin</label>
-                            <select required>
-                                <option disabled selected></option>
-                                <option name="jenis_kelamin" id="jenis_kelamin" value="Pria">Pria</option>
-                                <option name="jenis_kelamin" id="jenis_kelamin" value="Wanita">Wanita</option>                             
-                            </select>
+                            <label for="jenis_kelamin">Jenis Kelamin (Isi dengan Pria/Wanita)</label>
+                            <input type="text" name="jenis_kelamin" id="jenis_kelamin" placeholder="Jenis Kelamin" required>
                         </div>
 
                         <div class="input-field">
-                            <label for="golongan_darah">Golongan Darah</label>
-                            <select required>
-                                <option disabled selected></option>
-                                <option name="golongan_darah" id="golongan_darah" value="A">A</option>
-                                <option name="golongan_darah" id="golongan_darah" value="B">B</option>
-                                <option name="golongan_darah" id="golongan_darah" value="AB">AB</option>
-                                <option name="golongan_darah" id="golongan_darah" value="O">O</option>                              
-                            </select>
+                            <label for="golongan_darah">Golongan Darah (Isi dengan A/B/AB/O)</label>
+                            <input type="text" name="golongan_darah" id="golongan_darah" placeholder="Golongan Darah" required>
                         </div>
 
                         <div class="input-field">
@@ -110,10 +97,11 @@
 
                     </div>
 
-                        <button type="submit" class="buttons" href="login.html">
-                            <span class="btnText">Submit</span>
+                        <button type="submit" class="buttons">
+                            <span href="index.html" class="btnText">Submit</span>
                             <i class="uil uil-navigator"></i>
                         </button>
+
                     </div>
                     
                 </div>
@@ -122,5 +110,6 @@
     </div>
 
     <!--<script src="script.js"></script>-->
+
 </body>
 </html>
