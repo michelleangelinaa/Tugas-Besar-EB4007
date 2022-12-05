@@ -3,6 +3,11 @@ require "koneksiDB.php";
 
 $koneksiDB = mysqli_connect("localhost", "root", "", "websitepuskemas");
 
+if (!$koneksiDB)
+    {
+        die("Connection failed!" . mysqli_connect_error());
+    }
+
 $nama_lengkap = $_POST["nama_lengkap"];
 $nik = $_POST["nik"];
 $tanggal_lahir = $_POST["tanggal_lahir"];
@@ -17,7 +22,7 @@ $email = $_POST["email"];
 $username = $_POST["username"];
 $password = hash("sha256", $_POST["password"]);
 
-$sql = mysqli_query($koneksiDB, "INSERT INTO akunpasien (nama_lengkap, nik, tanggal_lahir, usia, tempat_tinggal, bpjs, jenis_kelamin, golongan_darah, pekerjaan, nomor_telepon, email, username, password) VALUES ('".$nama_lengkap."', '".$nik."', '".$tanggal_lahir."', '".$usia."', '".$tempat_tinggal."', '".$bpjs."', '".$jenis_kelamin."', '".$golongan_darah."', '".$pekerjaan."', '".$nomor_telepon."', '".$email."', '".$username."', '".$password."')");
+$sql = mysqli_query($koneksiDB, "INSERT INTO akunpasien (nama_lengkap, nik, tanggal_lahir, usia, tempat_tinggal, bpjs, jenis_kelamin, golongan_darah, pekerjaan, nomor_telepon, email, username, password)
+        VALUES ('".$nama_lengkap."', '".$nik."', '".$tanggal_lahir."', '".$usia."', '".$tempat_tinggal."', '".$bpjs."', '".$jenis_kelamin."', '".$golongan_darah."', '".$pekerjaan."', '".$nomor_telepon."', '".$email."', '".$username."', '".$password."')");
 
-echo "Registrasi berhasil";
- ?>
+?>

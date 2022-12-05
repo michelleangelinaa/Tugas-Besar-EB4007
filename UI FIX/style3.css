@@ -11,7 +11,7 @@ body{
 .container{
   width: 100%;
   height: 100vh;
-  background-image: url(back.jpg);
+  background-image: url(wp11352697-medical-heart-wallpapers.jpg);
   background-position: center;
   background-size: cover;
   padding-top: 35px;
@@ -109,7 +109,7 @@ a{
 
   .main-container h2 {
     margin: 0 0 80px 0;
-    color: #8373e6;
+    color: #ffffff;
     font-size: 30px;
     font-family: "Raleway", sans-serif;
     font-weight: 400;
@@ -140,7 +140,7 @@ a{
 
   .radio-btn > i {
     color: #ffffff;
-    background-color: #8373e6;
+    background-color: #1b5e47;
     font-size: 20px;
     position: absolute;
     top: -15px;
@@ -163,13 +163,13 @@ a{
   }
 
   .radio-btn .hobbies-icon i {
-    color: #8373e6;
+    color: #ffffff;
     line-height: 80px;
     font-size: 60px;
   }
 
   .radio-btn .hobbies-icon h3 {
-    color: #8373e6;
+    color: #ffffff;
     font-family: "Raleway", sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -177,7 +177,7 @@ a{
   }
 
   .custom-radio input:checked + .radio-btn {
-    border: 3px solid #8373e6;
+    border: 3px solid #ffffff;
   }
 
   .custom-radio input:checked + .radio-btn > i {

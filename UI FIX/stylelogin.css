@@ -11,7 +11,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #4070f4;
+    background: #000000;
 }
 nav{
     padding: 10px 0;
@@ -24,7 +24,7 @@ nav{
     text-decoration: none;
   }
   span{
-    color: #f9004d;
+    color: #b5fed9;
   }
   nav ul li{
     display: inline-block;
@@ -36,7 +36,7 @@ nav{
     transition: 0.5s;
   }
   nav ul li a:hover{
-    color: #f9004d;
+    color: #b5fed9;
   }
   .login{
     text-decoration: none;
@@ -57,7 +57,7 @@ nav{
   .container{
     width: 100%;
     height: 100vh;
-    background-image: url(back.jpg);
+    background-image: url(pexels-joey-kyber-119931.jpg);
     background-position: center;
     background-size: cover;
     padding-top: 35px;
@@ -69,7 +69,7 @@ nav{
     position: relative;
     font-size: 20px;
     font-weight: 600;
-    color: #333;
+    color: #b5fed9;
 }
 .container header::before{
     content: "";
@@ -78,19 +78,22 @@ nav{
     bottom: -2px;
     height: 3px;
     width: 27px;
-    background-color: #4070f4;
+    background-color: #7ba098;
 }
 .container form{
-    position: relative;
-    margin-top: 16px;
-    min-height: 500px;
-    width: 1290px;
+    position: center;
+    margin-top: 100px;
+    min-height: 300px;
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
+
 }
 .container form .form{
-    position: absolute;
+    position: center;
     background-color: #fff;
 }
 .container form .form.second{
@@ -115,7 +118,7 @@ form.secActive .form.first{
     font-weight: 500;
     margin-left: 10px;
     margin-top: 10px;
-    color: #333;
+    color: #b5fed9;
 }
 .container form .fields{
     display: flex;
@@ -125,11 +128,11 @@ form.secActive .form.first{
 }
 form .fields .input-field{
     display: flex;
-    width: 30%;
+    width: 60%;
     flex-direction: column;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
+    align-items: center;
+    margin: auto;
+    margin-top: 30px;
 }
 .input-field label{
     font-size: 12px;
@@ -169,9 +172,9 @@ form .fields .input-field{
     outline: none;
     color: #fff;
     border-radius: 5px;
-    margin-left: 10px;
+    margin-left: 25px;
     margin-top: 10px;
-    background-color: #4070f4;
+    background-color: #423b0b;
     transition: all 0.3s linear;
     cursor: pointer;
 }
@@ -180,7 +183,7 @@ form .fields .input-field{
     font-weight: 400;
 }
 form button:hover{
-    background-color: #265df2;
+    background-color: #423b0b;
 }
 form button i,
 form .backBtn i{
@@ -194,18 +197,27 @@ form .buttons{
     align-items: center;
 }
 form .buttons button , .backBtn{
-    margin-right: 14px;
+    margin: auto;
 }
+
+span.psw {
+    float: right;
+    padding-top: 0px;
+    color: #000;
+    margin: auto;
+  }
 
 @media (max-width: 750px) {
     .container form{
         overflow-y: scroll;
+        width: 100%;
+        height: auto;
     }
     .container form::-webkit-scrollbar{
        display: none;
     }
     form .fields .input-field{
-        width: calc(100% / 2 - 15px);
+        width: calc(100% / 2 - 5px);
     }
 }
 
