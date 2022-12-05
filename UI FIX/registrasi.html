@@ -21,93 +21,99 @@
               <a href="index.html">Noble<span>Cure</span></a>
             </div>
             <div class="buttons">
-              <a href="daftarpemeriksaan.html" class="login">Daftar Pemeriksaan</a>
+              <a href="daftarpemeriksaan.html" class="login">Login</a>
               <a href="registrasi.html" class="btn">Register</a>
             </div>
           </nav>
         <header>Registration</header>
-        <form action="#">
+        <form name="frmRegistration" class="needs-validation " method="post" action="inputakunpasien.php">
             <div class="form first">
                 <div class="details personal">
 
                     <div class="fields">
                         <div class="input-field">
-                            <label>Full Name</label>
-                            <input type="text" placeholder="Enter your name" required>
+                            <label for="nama_lengkap">Nama Lengkap</label>
+                            <input type="text" name="nama_lengkap" id="nama_lengkap" placeholder="Nama Lengkap" required>
                         </div>
 
                         <div class="input-field">
-                            <label>Date of Birth</label>
-                            <input type="date" placeholder="Enter birth date" required>
+                            <label for="nik">NIK</label>
+                            <input type="number" name="nik" id="nik" placeholder="Nomor Induk Kependudukan" required>
                         </div>
 
                         <div class="input-field">
-                            <label>Email</label>
-                            <input type="text" placeholder="Enter your email" required>
+                            <label for="tanggal_lahir">Tanggal Lahir</label>
+                            <input type="date" name="tanggal_lahir" id="tanggal_lahir" placeholder="Tanggal Lahir" required>
                         </div>
 
                         <div class="input-field">
-                            <label>Mobile Number</label>
-                            <input type="number" placeholder="Enter mobile number" required>
+                            <label for="usia">Usia</label>
+                            <input type="number" name="usia" id="usia" placeholder="Usia" required>
                         </div>
 
                         <div class="input-field">
-                            <label>Gender</label>
+                            <label for="tempat_tinggal">Tempat Tinggal</label>
+                            <input type="text" name="tempat_tinggal" id="tempat_tinggal" placeholder="Tempat Tinggal Singkat" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="bpjs">Pemilik BPJS</label>
                             <select required>
-                                <option disabled selected>Select gender</option>
-                                <option>Male</option>
-                                <option>Female</option>
-                                <option>Others</option>
+                                <option disabled selected></option>
+                                <option name="bpjs" id="bpjs" value="Ya">Ya</option>
+                                <option name="bpjs" id="bpjs" value="Tidak">Tidak</option>                             
                             </select>
                         </div>
 
                         <div class="input-field">
-                            <label>Occupation</label>
-                            <input type="text" placeholder="Enter your ccupation" required>
-                        </div>
-                        
-                    </div>
-
-                    <div class="fields">
-                        <div class="input-field">
-                            <label>ID Type</label>
-                            <input type="text" placeholder="Enter ID type" required>
+                            <label for="jenis_kelamin">Jenis Kelamin</label>
+                            <select required>
+                                <option disabled selected></option>
+                                <option name="jenis_kelamin" id="jenis_kelamin" value="Pria">Pria</option>
+                                <option name="jenis_kelamin" id="jenis_kelamin" value="Wanita">Wanita</option>                             
+                            </select>
                         </div>
 
                         <div class="input-field">
-                            <label>ID Number</label>
-                            <input type="number" placeholder="Enter ID number" required>
+                            <label for="golongan_darah">Golongan Darah</label>
+                            <select required>
+                                <option disabled selected></option>
+                                <option name="golongan_darah" id="golongan_darah" value="A">A</option>
+                                <option name="golongan_darah" id="golongan_darah" value="B">B</option>
+                                <option name="golongan_darah" id="golongan_darah" value="AB">AB</option>
+                                <option name="golongan_darah" id="golongan_darah" value="O">O</option>                              
+                            </select>
                         </div>
 
                         <div class="input-field">
-                            <label>Issued Authority</label>
-                            <input type="text" placeholder="Enter issued authority" required>
+                            <label for="pekerjaan">Pekerjaan</label>
+                            <input type="text" name="pekerjaan" id="pekerjaan" placeholder="Pekerjaan" required>
                         </div>
 
                         <div class="input-field">
-                            <label>Issued State</label>
-                            <input type="text" placeholder="Enter issued state" required>
+                            <label for="nomor_telepon">Nomor Telepon</label>
+                            <input type="number" name="nomor_telepon" id="nomor_telepon" placeholder="Nomor Telepon" required>
                         </div>
 
                         <div class="input-field">
-                            <label>Issued Date</label>
-                            <input type="date" placeholder="Enter your issued date" required>
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" placeholder="Email" required>
                         </div>
 
                         <div class="input-field">
-                            <label>Expiry Date</label>
-                            <input type="date" placeholder="Enter expiry date" required>
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username" placeholder="Username Akun" required>
                         </div>
 
                         <div class="input-field">
-                            <label>Expiry Date</label>
-                            <input type="date" placeholder="Enter expiry date" required>
-                        </div>
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" placeholder="Password Akun" required>
+                        </div>                        
 
                     </div>
 
                     <div class="buttons">  
-                        <button class="sumbit">
+                        <button>
                             <span class="btnText">Submit</span>
                             <i class="uil uil-navigator"></i>
                         </button>
