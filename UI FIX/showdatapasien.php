@@ -57,7 +57,7 @@
                 <th>Username</th>
             </tr>
             <?php
-            $koneksiDB = mysqli_connect("localhost","root","","puskesmas");
+            $koneksiDB = mysqli_connect("localhost","root","","websitepuskesmas");
             $sql = "SELECT * FROM akunpasien";
             $result = $koneksiDB -> query($sql);
 
