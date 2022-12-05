@@ -11,7 +11,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #4070f4;
+    background: #000000;
 }
 nav{
     padding: 10px 0;
@@ -24,7 +24,7 @@ nav{
     text-decoration: none;
   }
   span{
-    color: #f9004d;
+    color: #b5fed9;
   }
   nav ul li{
     display: inline-block;
@@ -36,7 +36,7 @@ nav{
     transition: 0.5s;
   }
   nav ul li a:hover{
-    color: #f9004d;
+    color: #b5fed9;
   }
   .login{
     text-decoration: none;
@@ -57,7 +57,7 @@ nav{
   .container{
     width: 100%;
     height: 100vh;
-    background-image: url(back.jpg);
+    background-image: url(pexels-joey-kyber-119931.jpg);
     background-position: center;
     background-size: cover;
     padding-top: 35px;
@@ -69,7 +69,7 @@ nav{
     position: relative;
     font-size: 20px;
     font-weight: 600;
-    color: #333;
+    color: #b5fed9;
 }
 .container header::before{
     content: "";
@@ -78,7 +78,7 @@ nav{
     bottom: -2px;
     height: 3px;
     width: 27px;
-    background-color: #4070f4;
+    background-color: #7ba098;
 }
 .container form{
     position: relative;
@@ -115,7 +115,7 @@ form.secActive .form.first{
     font-weight: 500;
     margin-left: 10px;
     margin-top: 10px;
-    color: #333;
+    color: #b5fed9;
 }
 .container form .fields{
     display: flex;
@@ -171,7 +171,7 @@ form .fields .input-field{
     border-radius: 5px;
     margin-left: 10px;
     margin-top: 10px;
-    background-color: #4070f4;
+    background-color: #423b0b;
     transition: all 0.3s linear;
     cursor: pointer;
 }
@@ -180,7 +180,7 @@ form .fields .input-field{
     font-weight: 400;
 }
 form button:hover{
-    background-color: #265df2;
+    background-color: #423b0b;
 }
 form button i,
 form .backBtn i{
