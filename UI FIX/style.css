@@ -6,7 +6,7 @@
   font-family: 'Karla', sans-serif;
 }
 body{
-  color: rgb(227, 28, 28);
+  color: #ffffff;
 }
 .container{
   width: 100%;
@@ -75,7 +75,7 @@ nav ul li a:hover{
   position: absolute;
   min-height: 200px;
   width: 1080px;
-  background-color: rgba(255, 255, 255, 0.764);
+  background-color: rgba(0, 0, 0, 0.764);
   border-radius: 10px;
   overflow: hidden;
   margin: auto;

@@ -199,3 +199,11 @@ form .buttons button , .backBtn{
     margin: auto;
 }
 
+@media (max-width: 750px) {
+    .container{
+        overflow-y: scroll;
+        width: calc(100% / 2 - 5px);
+        height: auto;
+    }
+  }
+

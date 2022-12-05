@@ -1,5 +1,12 @@
 <!---Coding By CoderGirl!--->
-<html lang="en">
+<html>
+
+<?php
+session_start();
+$koneksiDB = mysqli_connect("localhost","root","","websitepuskemas");
+$username = $_SESSION['username'];
+$sql = "SELECT * FROM akunpasien WHERE username = '$username'";
+?>
   
 <head>
   <meta charset="UTF-8">
@@ -28,6 +35,7 @@
       
       <div class="buttons">
         <a href="index.html" class="login">Logout</a>
+        <a class="btn"><?php echo $username ?></a>
       </div>
     </nav>
     <div class="main-container">

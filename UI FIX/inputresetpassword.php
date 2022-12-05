@@ -7,6 +7,8 @@
     $password = hash("sha256", $_POST["password"]);
 
     $sql = mysqli_query($koneksiDB, "UPDATE akunpasien SET password='$password' WHERE username='$username'");
+    
+    header('Location: resetpasswordberhasil.html');
+    exit;
 
-    echo "Password berhasil diganti";
 ?>

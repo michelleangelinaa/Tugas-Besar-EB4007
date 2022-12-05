@@ -32,5 +32,7 @@ $sql = mysqli_query($koneksiDB, "INSERT INTO pemeriksaandokter (rekam_medis, kel
 VALUES ('".$rekam_medis."', '".$keluhan_pasien."', '".$diagnosis."', '".$tindak_lanjut."', '".$obat_1."', '".$jumlah_obat_1."', '".$satuan_obat_1."', '".$pemakaian_obat_1."', '".$obat_2."', '".$jumlah_obat_2."', '".$satuan_obat_2."', '".$pemakaian_obat_2."', 
 '".$obat_3."', '".$jumlah_obat_3."', '".$satuan_obat_3."', '".$pemakaian_obat_3."', '".$obat_4."', '".$jumlah_obat_4."', '".$satuan_obat_4."', '".$pemakaian_obat_4."')");
 
-echo "Pemeriksaan telah berhasil didata";
+header('Location: menudokter.html');
+exit;
+
  ?>

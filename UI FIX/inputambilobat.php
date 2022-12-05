@@ -56,5 +56,6 @@ $row = $updateobat4 -> fetch_assoc();
 $sisastok4 = ((int) $row["stok"]) - ((int) $jumlah_obat_4);
 $sql4 = mysqli_query($koneksiDB, "UPDATE persediaanobat SET stok='$sisastok4' WHERE nama_obat='$obat_4'");
 
-echo "Pengambilan Obat telah Dilakukan";
+header('Location: menufarmasi.html');
+exit;
 ?>

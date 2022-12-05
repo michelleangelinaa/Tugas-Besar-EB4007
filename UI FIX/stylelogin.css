@@ -83,19 +83,16 @@ nav{
 .container form{
     position: center;
     margin-top: 100px;
-    min-height: 400px;
+    min-height: 300px;
     width: 500px;
     margin: auto;
     margin-top: 50px;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.764);
     border-radius: 10px;
     overflow: hidden;
 
 }
-.container form .form{
-    position: center;
-    background-color: #fff;
-}
+
 .container form .form.second{
     opacity: 0;
     pointer-events: none;
@@ -135,15 +132,15 @@ form .fields .input-field{
     margin-top: 30px;
 }
 .input-field label{
-    font-size: 12px;
+    font-size: 20px;
     font-weight: 500;
-    color: #2e2e2e;
+    color: #000000;
 }
 .input-field input, select{
     outline: none;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
-    color: #333;
+    color: rgb(0, 0, 0);
     border-radius: 5px;
     border: 1px solid #aaa;
     padding: 0 15px;
@@ -179,7 +176,7 @@ form .fields .input-field{
     cursor: pointer;
 }
 .container form .btnText{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
 }
 form button:hover{
@@ -203,7 +200,7 @@ form .buttons button , .backBtn{
 span.psw {
     float: right;
     padding-top: 0px;
-    color: #000;
+    color: rgb(255, 0, 0);
     margin: auto;
   }
 

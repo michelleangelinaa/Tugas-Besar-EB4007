@@ -5,9 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Website Puskesmas</title>
   <!---Custom Css File!--->
-  <link rel="stylesheet" href="style3.css">
+  <link rel="stylesheet" href="stylemenu.css">
    <!-- Google Fonts Link -->
    <link
    href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;800&display=swap"
@@ -23,11 +22,10 @@
   <div class="container">
     <nav>
       <div class="logo">
-        <a href="#">Website Puskesmas</a>
+        <a href="index.html">Puskesmas<span> Sejahtera</span></a>
       </div>
-      
       <div class="buttons">
-        <a class="btn">Nama Akun</a>
+        <a href="logout.php" class="login">Logout</a>
       </div>
     </nav>
     <div class="main-container">
@@ -35,7 +33,7 @@
         <div class="radio-buttons">
           <label class="custom-radio">
             <input type="radio" name="radio" checked />
-            <span class="radio-btn"  onclick="location.href='index.php'"
+            <span class="radio-btn"  onclick="location.href='accountdetailfarmasi.php'"
               ><i class="las la-check"></i>
               <div class="hobbies-icon">
                 <i class="las la-user"></i>
@@ -46,31 +44,41 @@
         </label>
         <label class="custom-radio">
           <input type="radio" name="radio" checked />
-          <span class="radio-btn"  onclick="location.href='index.php'"
+          <span class="radio-btn"  onclick="location.href='showdatapasien.php'"
             ><i class="las la-check"></i>
             <div class="hobbies-icon">
               <i class="las la-users"></i>
-              <h3>Cek Pasien</h3>
+              <h3>Cek Data Pasien</h3>
             </div>
           </span>
         </label>
           <label class="custom-radio">
             <input type="radio" name="radio" />
-            <span class="radio-btn"
+            <span class="radio-btn" onclick="location.href='uipersediaanobat.php'"
               ><i class="las la-check"></i>
               <div class="hobbies-icon">
                 <i class="las la-briefcase-medical"></i>
-                <h3>Persediaan Obat</h3>
+                <h3>Update Persediaan Obat</h3>
               </div>
             </span>
           </label>
           <label class="custom-radio">
             <input type="radio" name="radio" />
-            <span class="radio-btn"
+            <span class="radio-btn" onclick="location.href='indexambilobat.php'"
               ><i class="las la-check"></i>
               <div class="hobbies-icon">
                 <i class="las la-file-medical"></i>
                 <h3>Pemberian Obat</h3>
+              </div>
+            </span>
+          </label>
+          <label class="custom-radio">
+            <input type="radio" name="radio" />
+            <span class="radio-btn" onclick="location.href='showdataobat.php'"
+              ><i class="las la-check"></i>
+              <div class="hobbies-icon">
+                <i class="las la-laptop-medical"></i>
+                <h3>Cek Stok Obat</h3>
               </div>
             </span>
           </label>

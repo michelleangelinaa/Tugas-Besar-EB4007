@@ -18,7 +18,7 @@
     <div class="container">
         <nav>
             <div class="logo">
-                <a href="index.html">Puskesmas<span> Sejahtera</span></a>
+              <a href="index.html">Puskesmas<span>Sejahtera</span></a>
             </div>
             <div class="buttons">
                 <a href="loginpasien.html" class="login">Login Pasien</a>
@@ -26,19 +26,19 @@
                 <a href="registrasi.html" class="btn">Register</a>
             </div>
           </nav>
-        <header>Login</header>
-        <form action="loginpasien.php" method="post">
+        <header>Login Staf Administrasi</header>
+        <form action="loginadmin.php" method="post">
             <div class="form first">
                 <div class="details personal">
                     <div class="fields">
                         <div class="input-field">
                             <label for="username"><span> Username </span></label>
-                            <input type="text" name="username" id="username" placeholder="Username Akun" required>
+                            <input type="text" name="username_admin" id="username_admin" placeholder="Username Akun Staf" required>
                         </div>
 
                         <div class="input-field">
                             <label for="password"><span> Password </span></label>
-                            <input type="password" name="password" id="password" placeholder="Password Akun" required>
+                            <input type="password" name="password_admin" id="password_admin" placeholder="Password Akun Staf" required>
                         </div> 
                     </div>
                     
@@ -46,10 +46,9 @@
 
                     <div class="buttons">  
                         <button type="submit" class="buttons">
-                            <span href="menupasien.html" class="btnText">Submit</span>
+                            <span href="menuadmin.html" class="btnText">Submit</span>
                             <i class="uil uil-navigator"></i>
                         </button>
-                        <span class="psw"><a href="resetpassword.html"><span class="psw">Forgot password?</span></a></span>
                     </div>
                     
                 </div>

@@ -15,7 +15,7 @@
 	$row = mysqli_fetch_assoc($result);
 	
 	if ($username != $row['username']){
-		header('Location: login.html');
+		header('Location: loginpasien.html');
 		exit;
 	}
 	else {
@@ -26,6 +26,6 @@
 		header('Location: menupasien.html');
 		exit;
 	}
-	
+
 	mysqli_close($con);
 ?>
