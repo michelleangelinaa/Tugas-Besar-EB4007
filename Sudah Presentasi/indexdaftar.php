@@ -14,10 +14,9 @@ $row=mysqli_fetch_array($result);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Simple Website Design</title>
+  <title>Daftar Jadwal Konsultasi</title>
   <!---Custom Css File!--->
   <link rel="stylesheet" href="styleaccountdetail.css">
-  <title>Lihat Data Pasien</title>
   <style type="text/css">
     table{
         border-collapse: collapse;
@@ -54,7 +53,7 @@ $row=mysqli_fetch_array($result);
     <div class="content">
     <form action="inputdaftar.php" method="post" enctype="multipart/form-data">
     <table>
-    <tr><td>Nomor Rekam Medis</td><td>:</td><td><input type="number" name="rekam_medis" /></td></tr>
+    <!-- <tr><td>Nomor Rekam Medis</td><td>:</td><td><input type="number" name="rekam_medis" /></td></tr>
     <tr><td>Nama Lengkap</td><td>:</td><td><input type="text" name="nama_lengkap" /></td></tr>
     <tr><td>NIK</td><td>:</td><td><input type="number" name="nik" /></td></tr>
     <tr><td>Tanggal Lahir</td><td>:</td><td><input type="date" name="tanggal_lahir" /></td></tr>
@@ -64,7 +63,7 @@ $row=mysqli_fetch_array($result);
 	    <option value="Ya">Ya</option>
 	    <option value="Tidak">Tidak</option>
       </select>
-    </td></tr>
+    </td></tr> -->
     <tr><td>Poli yang dituju</td><td>:</td><td>
       <select name = "poli_dituju">
       <option value=""></option>
