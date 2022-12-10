@@ -5,12 +5,24 @@ $koneksiDB = mysqli_connect("localhost", "root", "", "websitepuskemas");
 
 $rekam_medis = $_POST["rekam_medis"];
 $nama_lengkap = $_POST["nama_lengkap"];
-$nik = $_POST["nik"];
-$tanggal_lahir = $_POST["tanggal_lahir"];
-$bpjs = $_POST["bpjs"];
-$poli_dituju = $_POST["poli_dituju"];
-$dokter_dituju = $_POST["dokter_dituju"];
-$tanggal_pemeriksaan = $_POST["tanggal_pemeriksaan"];
+
+$sql1 = "SELECT * FROM daftarulang WHERE rekam_medis = '$rekam_medis'";
+
+$result = mysqli_query($koneksiDB,$sql1);
+$row=mysqli_fetch_array($result);
+
+$result = $koneksiDB->query($sql1);
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $nik = $row["nik"];
+        $tanggal_lahir = $row["tanggal_lahir"];
+        $bpjs = $row["bpjs"];
+        $poli_dituju = $row["poli_dituju"];
+        $dokter_dituju = $row["dokter_dituju"];
+        $tanggal_pemeriksaan = $row["tanggal_pemeriksaan"];
+    }
+}
 
 $obat_1 = $_POST["obat_1"];
 $jumlah_obat_1 = $_POST["jumlah_obat_1"];

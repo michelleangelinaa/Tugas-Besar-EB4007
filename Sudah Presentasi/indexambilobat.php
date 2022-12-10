@@ -1,11 +1,4 @@
 <html>
-
-<?php
-session_start();
-$koneksiDB = mysqli_connect("localhost","root","","websitepuskemas");
-
-?>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,7 +41,7 @@ $koneksiDB = mysqli_connect("localhost","root","","websitepuskemas");
     <table>
     <tr><td>Nomor Rekam Medis</td><td>:</td><td><input type="number" name="rekam_medis" /></td></tr>
     <tr><td>Nama Lengkap</td><td>:</td><td><input type="text" name="nama_lengkap" /></td></tr>
-    <tr><td>NIK</td><td>:</td><td><input type="number" name="nik" /></td></tr>
+    <!-- <tr><td>NIK</td><td>:</td><td><input type="number" name="nik" /></td></tr>
     <tr><td>Tanggal Lahir</td><td>:</td><td><input type="date" name="tanggal_lahir" /></td></tr>
     <tr><td>Pemilik BPJS</td><td>:</td><td>
       <select name = "bpjs">
@@ -67,7 +60,7 @@ $koneksiDB = mysqli_connect("localhost","root","","websitepuskemas");
       </select>
     </td></tr>
     <tr><td>Dokter yang dituju</td><td>:</td><td><input type="text" name="dokter_dituju" /></td></tr>
-    <tr><td>Tanggal Pemeriksaan</td><td>:</td><td><input type="date" name="tanggal_pemeriksaan" /></td></tr>
+    <tr><td>Tanggal Pemeriksaan</td><td>:</td><td><input type="date" name="tanggal_pemeriksaan" /></td></tr> -->
 
     <tr><td>Obat yang Diberi</td><td>:</td><td><input type="text" name="obat_1" /></td></tr>
     <tr><td>Jumlah Obat yang Diberi</td><td>:</td><td><input type="number" name="jumlah_obat_1" /></td></tr>
