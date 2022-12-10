@@ -47,9 +47,13 @@ $koneksiDB = mysqli_connect("localhost","root","","websitepuskemas");
     <form action="inputpemeriksaan.php" method="post" enctype="multipart/form-data">
     <table>
     <tr><td>Nomor Rekam Medis</td><td>:</td><td><input type="number" name="rekam_medis" /></td></tr>
+    <tr><td>Nama Lengkap Pasien</td><td>:</td><td><input type="text" name="nama_lengkap" /></td></tr>
     <tr><td>Keluhan Pasien</td><td>:</td><td><textarea name="keluhan_pasien"></textarea></td></tr>
     <tr><td>Diagnosis</td><td>:</td><td><input type="text" name="diagnosis" /></td></tr>
     <tr><td>Tindak Lanjut jika Dibutuhkan</td><td>:</td><td><input type="text" name="tindak_lanjut" /></td></tr>
+    <tr><td>Dokter yang dituju</td><td>:</td><td><input type="text" name="dokter_dituju" /></td></tr>
+    <tr><td>Tanggal Pemeriksaan</td><td>:</td><td><input type="date" name="tanggal_pemeriksaan" /></td></tr>
+    <tr><td>Waktu Pemeriksaan</td><td>:</td><td><input type="time" name="waktu_pemeriksaan" /></td></tr>
     <tr><td>Obat yang Diberi</td><td>:</td><td><input type="text" name="obat_1" /></td></tr>
     <tr><td>Jumlah Obat yang Diberi</td><td>:</td><td><input type="number" name="jumlah_obat_1" /></td></tr>
     <tr><td>Satuan Obat</td><td>:</td><td>

@@ -32,9 +32,6 @@
             <div class="logo">
             <a href="#">Puskesmas <span>Sejahtera</span></a>
             </div>
-            <div class="buttons">
-            <a href="menupasien.html" class="btn"><?php echo $username ?></a>
-            </div>
         </nav>
     <br></br>    
     <h2>Daftar Pemeriksaan</h2>
@@ -42,17 +39,6 @@
     <div class="content">
     <form action="inputdaftar.php" method="post" enctype="multipart/form-data">
     <table>
-    <!-- <tr><td>Nomor Rekam Medis</td><td>:</td><td><input type="number" name="rekam_medis" /></td></tr>
-    <tr><td>Nama Lengkap</td><td>:</td><td><input type="text" name="nama_lengkap" /></td></tr>
-    <tr><td>NIK</td><td>:</td><td><input type="number" name="nik" /></td></tr>
-    <tr><td>Tanggal Lahir</td><td>:</td><td><input type="date" name="tanggal_lahir" /></td></tr>
-    <tr><td>Pemilik BPJS</td><td>:</td><td>
-      <select name = "bpjs">
-      <option value=""></option>
-	    <option value="Ya">Ya</option>
-	    <option value="Tidak">Tidak</option>
-      </select>
-    </td></tr> -->
     <tr><td>Poli yang dituju</td><td>:</td><td>
       <select name = "poli_dituju">
       <option value=""></option>

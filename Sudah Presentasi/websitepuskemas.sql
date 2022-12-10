@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2022 at 01:33 PM
+-- Generation Time: Dec 10, 2022 at 05:20 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -98,9 +98,9 @@ CREATE TABLE `akunpasien` (
   `tanggal_lahir` date NOT NULL,
   `usia` int(3) NOT NULL,
   `tempat_tinggal` text NOT NULL,
-  `bpjs` varchar(255) NOT NULL,
-  `jenis_kelamin` varchar(255) NOT NULL,
-  `golongan_darah` varchar(255) NOT NULL,
+  `bpjs` enum('Ya','Tidak') NOT NULL,
+  `jenis_kelamin` enum('Pria','Wanita') NOT NULL,
+  `golongan_darah` enum('A','B','AB','O') NOT NULL,
   `pekerjaan` varchar(255) NOT NULL,
   `nomor_telepon` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -127,7 +127,7 @@ INSERT INTO `akunpasien` (`rekam_medis`, `nama_lengkap`, `nik`, `tanggal_lahir`,
 CREATE TABLE `daftarulang` (
   `rekam_medis` int(8) NOT NULL,
   `nama_lengkap` varchar(255) NOT NULL,
-  `nik` int(16) NOT NULL,
+  `nik` varchar(255) NOT NULL,
   `tanggal_lahir` date NOT NULL,
   `bpjs` enum('Ya','Tidak') NOT NULL,
   `poli_dituju` enum('POLI UMUM','POLI GIGI DAN MULUT','POLI MATA','POLI THT') NOT NULL,
@@ -142,8 +142,7 @@ CREATE TABLE `daftarulang` (
 --
 
 INSERT INTO `daftarulang` (`rekam_medis`, `nama_lengkap`, `nik`, `tanggal_lahir`, `bpjs`, `poli_dituju`, `dokter_dituju`, `tanggal_pemeriksaan`, `waktu_pemeriksaan`, `keluhan_pasien`) VALUES
-(202246, 'Muhammad Fairuziko Nurrajab', 2147483647, '2000-01-12', 'Ya', 'POLI GIGI DAN MULUT', 'Lin Zhuang', '2022-12-07', '12:00:00', 'Gigi berlubang'),
-(202249, 'Arka', 2147483647, '2022-11-27', 'Ya', 'POLI UMUM', 'Aziz Zaidan', '2022-12-13', '10:02:00', 'Demam');
+(202247, 'Michelle Angelina', '3276080410010032', '2006-05-15', 'Tidak', 'POLI GIGI DAN MULUT', 'Lin Zhuang', '2022-12-14', '13:15:00', 'Pasang behel');
 
 -- --------------------------------------------------------
 
@@ -154,7 +153,7 @@ INSERT INTO `daftarulang` (`rekam_medis`, `nama_lengkap`, `nik`, `tanggal_lahir`
 CREATE TABLE `pemberianobat` (
   `rekam_medis` int(8) NOT NULL,
   `nama_lengkap` varchar(255) NOT NULL,
-  `nik` int(16) NOT NULL,
+  `nik` varchar(255) NOT NULL,
   `tanggal_lahir` date NOT NULL,
   `bpjs` enum('Ya','Tidak') NOT NULL,
   `poli_dituju` enum('POLI UMUM','POLI GIGI DAN MULUT','POLI MATA','POLI THT') NOT NULL,
@@ -181,7 +180,7 @@ CREATE TABLE `pemberianobat` (
 --
 
 INSERT INTO `pemberianobat` (`rekam_medis`, `nama_lengkap`, `nik`, `tanggal_lahir`, `bpjs`, `poli_dituju`, `dokter_dituju`, `tanggal_pemeriksaan`, `obat_1`, `jumlah_obat_1`, `satuan_obat_1`, `obat_2`, `jumlah_obat_2`, `satuan_obat_2`, `obat_3`, `jumlah_obat_3`, `satuan_obat_3`, `obat_4`, `jumlah_obat_4`, `satuan_obat_4`, `tanggal_ambil_obat`, `waktu_ambil_obat`) VALUES
-(202249, 'Arka', 2147483647, '2022-11-27', 'Ya', 'POLI UMUM', 'Aziz Zaidan', '2022-12-13', 'Panadol', 5, 'PIL', '', 0, '', '', 0, '', '', 0, '', '2022-12-13', '12:52:00');
+(202247, 'Michelle Angelina', '3276080410010032', '2006-05-15', 'Tidak', 'POLI GIGI DAN MULUT', 'Lin Zhuang', '2022-12-14', 'Panadol', 10, 'PIL', '', 0, '', '', 0, '', '', 0, '', '2022-12-14', '15:00:00');
 
 -- --------------------------------------------------------
 
@@ -191,9 +190,13 @@ INSERT INTO `pemberianobat` (`rekam_medis`, `nama_lengkap`, `nik`, `tanggal_lahi
 
 CREATE TABLE `pemeriksaandokter` (
   `rekam_medis` int(8) NOT NULL,
+  `nama_lengkap` varchar(255) NOT NULL,
   `keluhan_pasien` text NOT NULL,
   `diagnosis` text NOT NULL,
   `tindak_lanjut` text NOT NULL,
+  `dokter_dituju` varchar(255) NOT NULL,
+  `tanggal_pemeriksaan` date NOT NULL,
+  `waktu_pemeriksaan` time NOT NULL,
   `obat_1` varchar(255) NOT NULL,
   `jumlah_obat_1` int(3) NOT NULL,
   `satuan_obat_1` enum('PIL','TABLET','KAPSUL','BOTOL') NOT NULL,
@@ -216,8 +219,8 @@ CREATE TABLE `pemeriksaandokter` (
 -- Dumping data for table `pemeriksaandokter`
 --
 
-INSERT INTO `pemeriksaandokter` (`rekam_medis`, `keluhan_pasien`, `diagnosis`, `tindak_lanjut`, `obat_1`, `jumlah_obat_1`, `satuan_obat_1`, `pemakaian_obat_1`, `obat_2`, `jumlah_obat_2`, `satuan_obat_2`, `pemakaian_obat_2`, `obat_3`, `jumlah_obat_3`, `satuan_obat_3`, `pemakaian_obat_3`, `obat_4`, `jumlah_obat_4`, `satuan_obat_4`, `pemakaian_obat_4`) VALUES
-(202249, 'Demam', 'Demam Tinggi', 'Pemberian Obat', 'Panadol', 5, 'PIL', 'Diminum 5x sehari', '', 0, '', '', '', 0, '', '', '', 0, '', '');
+INSERT INTO `pemeriksaandokter` (`rekam_medis`, `nama_lengkap`, `keluhan_pasien`, `diagnosis`, `tindak_lanjut`, `dokter_dituju`, `tanggal_pemeriksaan`, `waktu_pemeriksaan`, `obat_1`, `jumlah_obat_1`, `satuan_obat_1`, `pemakaian_obat_1`, `obat_2`, `jumlah_obat_2`, `satuan_obat_2`, `pemakaian_obat_2`, `obat_3`, `jumlah_obat_3`, `satuan_obat_3`, `pemakaian_obat_3`, `obat_4`, `jumlah_obat_4`, `satuan_obat_4`, `pemakaian_obat_4`) VALUES
+(202247, 'Michelle Angelina', 'Pasang behel', 'Gigi berantakan', 'Pemasangan behel', 'Lin Zhuang', '2022-12-14', '13:15:00', 'Panadol', 10, 'PIL', 'Diminum 2x sehari', '', 0, '', '', '', 0, '', '', '', 0, '', '');
 
 -- --------------------------------------------------------
 
@@ -245,7 +248,7 @@ INSERT INTO `persediaanobat` (`nama_obat`, `jenis_obat`, `produsen`, `satuan`, `
 ('Tolak Angin', 'Obat Masuk Angin', 'STEI', 'BOTOL', 1, 10000, 20000, 20000, 100),
 ('Promaag', 'Obat Maag', 'SF', 'TABLET', 10, 5000, 7000, 35000, 150),
 ('Diatab', 'Obat Diare', 'FK ITB', 'KAPSUL', 10, 2000, 5000, 40000, 100),
-('Panadol', 'Obat Pusing', 'UI', 'PIL', 100, 50000, 5000, 30000, 100),
+('Panadol', 'Obat Pusing', 'UI', 'PIL', 100, 50000, 5000, 30000, 60),
 ('Mylanta', 'Obat Maag', 'ITB', 'KAPSUL', 10, 50000, 6000, 40000, 60),
 ('Permen Obat', 'Tenggorokan', 'UGM', 'KAPSUL', 5, 10000, 1000, 50000, 30);
 
@@ -267,7 +270,7 @@ ALTER TABLE `akunpasien`
 -- AUTO_INCREMENT for table `akunpasien`
 --
 ALTER TABLE `akunpasien`
-  MODIFY `rekam_medis` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=202250;
+  MODIFY `rekam_medis` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=202252;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

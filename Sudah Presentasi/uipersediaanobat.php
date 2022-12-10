@@ -99,8 +99,13 @@
                         </div>
 
                         <div class="input-field">
-                            <label for="satuan">Satuan (PIL/TABLET/KAPSUL/BOTOL)</label>
-                            <input type="text" name="satuan" id="satuan" placeholder="Satuan (PIL/TABLET/KAPSUL/BOTOL)" required>
+                            <label for="satuan">Satuan Obat</label>
+                            <select name="satuan" id="satuan">
+                                <option value="PIL">PIL</option>
+                                <option value="TABLET">TABLET</option>
+                                <option value="Kapsul">KAPSUL</option>
+                                <option value="Botol">BOTOL</option>
+                            </select>
                         </div>
 
                         <div class="input-field">
