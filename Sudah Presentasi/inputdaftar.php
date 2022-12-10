@@ -15,11 +15,11 @@ $result = $koneksiDB->query($sql1);
 if ($result->num_rows > 0) {
     // output data of each row
     while ($row = $result->fetch_assoc()) {
-        $rekam_medis = $_POST["SELECT rekam_medis FROM akunpasien"];
-        $nama_lengkap = $_POST["SELECT nama_lengkap FROM akunpasien"];
-        $nik = $_POST["SELECT nik FROM akunpasien"];
-        $tanggal_lahir = $_POST["SELECT tanggal_lahir FROM akunpasien"];
-        $bpjs = $_POST["SELECT bpjs FROM akunpasien"];
+        $rekam_medis = $row["rekam_medis"];
+        $nama_lengkap = $row["nama_lengkap"];
+        $nik = $row["nik"];
+        $tanggal_lahir = $row["tanggal_lahir"];
+        $bpjs = $row["bpjs"];
     }
 }
 
