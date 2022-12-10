@@ -1,6 +1,7 @@
 <?php
 require "koneksiDB.php";
 
+session_start();
 $koneksiDB = mysqli_connect("localhost", "root", "", "websitepuskemas");
 
 $username = $_SESSION['username'];
