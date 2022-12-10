@@ -1,15 +1,4 @@
 <html>
-
-<?php
-session_start();
-$koneksiDB = mysqli_connect("localhost","root","","websitepuskemas");
-$username = $_SESSION['username'];
-$sql = "SELECT * FROM akunpasien WHERE username = '$username'";
-
-$result = mysqli_query($koneksiDB,$sql);
-$row=mysqli_fetch_array($result);
-?>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

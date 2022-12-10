@@ -10,11 +10,11 @@ $sql1 = "SELECT * FROM akunpasien WHERE username = '$username'";
 $result = mysqli_query($koneksiDB,$sql1);
 $row=mysqli_fetch_array($result);
 
-$rekam_medis = "SELECT rekam_medis FROM akunpasien WHERE username = '$username'";
-$nama_lengkap = "SELECT nama_lengkap FROM akunpasien WHERE username = '$username'";
-$nik = "SELECT nik FROM akunpasien WHERE username = '$username'";
-$tanggal_lahir = "SELECT tanggal_lahir FROM akunpasien WHERE username = '$username'";
-$bpjs = "SELECT bpjs FROM akunpasien WHERE username = '$username'";
+$rekam_medis = $_POST["SELECT rekam_medis FROM akunpasien WHERE username = '$username'"];
+$nama_lengkap = $_POST["SELECT nama_lengkap FROM akunpasien WHERE username = '$username'"];
+$nik = $_POST["SELECT nik FROM akunpasien WHERE username = '$username'"];
+$tanggal_lahir = $_POST["SELECT tanggal_lahir FROM akunpasien WHERE username = '$username'"];
+$bpjs = $_POST["SELECT bpjs FROM akunpasien WHERE username = '$username'"];
 $poli_dituju = $_POST["poli_dituju"];
 $dokter_dituju = $_POST["dokter_dituju"];
 $tanggal_pemeriksaan = $_POST["tanggal_pemeriksaan"];
