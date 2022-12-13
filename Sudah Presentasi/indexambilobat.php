@@ -4,18 +4,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!---Custom Css File!--->
-  <link rel="stylesheet" href="styleaccountdetail.css">
+  <link rel="stylesheet" href="styleregistrasi.css">
   <title>Pengambilan Obat Oleh Pasien</title>
   <style type="text/css">
     table{
+      verflow-y: auto;
+      align-items: center; 
+        margin: auto;
         border-collapse: collapse;
-        width: 100%;
+        width: 80%;
         font-family: 'Karla', sans-serif;
         font-size: 14px;
         text-align: Left;
-        display: inline-block;
+      
         overflow: auto;
-        white-space: nowrap;
+        
         margin-left:auto;
         margin-right:auto;
     }
@@ -24,6 +27,15 @@
         padding: 8px;
         text-align: left;
     }
+    body{
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+    background-image: url(asd.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
     </style>
 </head>
     <body>
@@ -34,7 +46,7 @@
             </div>
         </nav>
     <br></br>    
-    <h2>Pengambilan Obat Oleh Pasien</h2>
+    <header>Pengambilan Obat Oleh Pasien</header>
     <br></br>
     <div class="content">
     <form action="inputambilobat.php" method="post" enctype="multipart/form-data">
@@ -92,6 +104,11 @@
     <tr><td>Tanggal Pengambilan Obat Oleh Pasien</td><td>:</td><td><input type="date" name="tanggal_ambil_obat" /></td></tr>
     <tr><td>Waktu Pengambilan Obat Oleh Pasien</td><td>:</td><td><input type="time" name="waktu_ambil_obat" /></td></tr>
   </table>
-    <input type="Submit" name="aksi" value="Simpan"/>
+  <br>
+  <button type="submit" class="buttons">
+                            <span href="index.html" class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+  </br>
 </body>
 </html>

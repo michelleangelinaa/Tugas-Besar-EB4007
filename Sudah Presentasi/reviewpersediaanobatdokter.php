@@ -16,7 +16,7 @@
         font-family: 'Karla', sans-serif;
         font-size:23px;
         text-align: Left;
-        display: block;
+        border-style:hidden;
         border-radius: 20px;
         white-space: nowrap;
         background-color: rgba(255, 255, 255, 0.764);
